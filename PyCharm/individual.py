@@ -7,25 +7,26 @@ if __name__ == '__main__':
     while True:
         inp = input(">>> ").lower()
 
-        if inp == 'add':
-            punkt_naznachenia = input("Пункт назначения поезда: ")
-            train_number = input("Номер поезда: ")
-            time_otpravlenia = input("Время отправления: ")
+        match inp:
+            case 'add':
+                punkt_naznachenia = input("Пункт назначения поезда: ")
+                train_number = input("Номер поезда: ")
+                time_otpravlenia = input("Время отправления: ")
 
-            dictionary = {
-                'Пункт назначения ': punkt_naznachenia,
-                'Номер поезда: ': train_number,
-                'Время отправления:': time_otpravlenia
-            }
+                dictionary = {
+                    'Пункт назначения ': punkt_naznachenia,
+                    'Номер поезда: ': train_number,
+                    'Время отправления:': time_otpravlenia
+                }
 
-            sp.append(dictionary)
-            sp = sorted(sp, key=lambda x: x['Номер поезда: '])
+                sp.append(dictionary)
+                sp = sorted(sp, key=lambda x: x['Номер поезда: '])
 
-        
-        if inp.isdigit():
-            for d in sp:
-                if inp in d.values():
-                    print(d)
-                else: 
-                    print('Поезда с таким номером нет')
+            
+            case inp.isdigit():
+                for d in sp:
+                    if inp in d.values():
+                        print(d)
+                    else: 
+                        print('Поезда с таким номером нет')
 
