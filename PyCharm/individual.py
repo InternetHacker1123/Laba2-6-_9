@@ -61,10 +61,13 @@ if __name__ == '__main__':
             case 'exit':
                 break
 
+
             case 'help':
                 print("Список команд:\n")
                 print("add - добавить поезд;")
                 print("list - вывести список поездов;")
+                print("choose - найти поезд с заданным номером")
                 print("help - отобразить справку;")
                 print("exit - завершить работу с программой.")
+
 
